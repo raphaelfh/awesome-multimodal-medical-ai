@@ -36,18 +36,30 @@ find the resource they need:
 
 ### Established entry format
 
-Entries follow this two-line shape, and new entries must match it:
+Entries are table rows, and new entries must match the shape of the table they
+join. Datasets use `Dataset | Modalities | Scale | Access`; platforms use
+`Platform | Modalities | Highlights | Access`.
 
 ```markdown
-- **[Name](url)** — One sentence on what it is and why it matters.
-  *Modalities:* comma-separated list · *Access:* Open | Registration | Application
+| **[Name](url)**<br><sub>One line on what it is and why it matters</sub> | `tag` `tag` | headline number<br><sub>qualifier</sub> | 🟢 Open<br><sub>caveat</sub> |
 ```
 
-Access levels are defined in the README's "How to Read the Entries" section:
-**Open** (direct download), **Registration** (free account or click-through
-terms), **Application** (formal request, data use agreement or review).
+- Modalities are tags written as inline code, at most six per row.
+- Access uses the legend at the top of the README: 🟢 Open (direct download),
+  🟡 Registration (free account or click-through terms), 🔴 Application
+  (formal request, data use agreement or review). Put exceptions in the
+  `<sub>` qualifier rather than inventing a new level.
+- Rows are ordered alphabetically within each table, and every new entry is
+  also added to the README's "Find by Modality" index.
 
-Entries are ordered alphabetically within each section.
+### HTML in the README
+
+GitHub sanitizes README HTML: `<br>`, `<sub>`, `<sup>`, `<details>`, `<img>`
+and `<a>` render, while `<script>`, `style=`, `class=` and `id=` are stripped.
+So the README cannot have real search, sorting or filtering — `<details>` and
+the "Find by Modality" link index are the closest available substitutes. Keep
+inline HTML limited to those formatting tags; anything needing genuine
+interactivity belongs on a separate page, not in the README.
 
 ## Curation bar
 

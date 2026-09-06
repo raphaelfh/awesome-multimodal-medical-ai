@@ -2,71 +2,77 @@
 
 A curated list of multimodal medical AI. Tools, agents, papers and datasets spanning medical imaging, clinical text/EHR, genomics, and multimodal fusion models.
 
+**Access:** 🟢 Open (direct download) · 🟡 Registration (free account or click-through terms) · 🔴 Application (formal request, data use agreement or committee review)
+
 ## Contents
 
-- [How to Read the Entries](#how-to-read-the-entries)
 - [Datasets](#datasets)
   - [Population-Scale Biobanks](#population-scale-biobanks)
   - [Brain & Mental Health](#brain--mental-health)
   - [Cancer Imaging](#cancer-imaging)
 - [Repositories & Platforms](#repositories--platforms)
+- [Find by Modality](#find-by-modality)
 - [Contributing](#contributing)
-
-## How to Read the Entries
-
-Every entry gives the resource, one sentence on what it is and why it matters,
-then the modalities it covers and how you get access:
-
-- **Open** — direct download, no account required.
-- **Registration** — free account or click-through data use terms.
-- **Application** — formal request, data use agreement or committee review.
 
 ## Datasets
 
 ### Population-Scale Biobanks
 
-- **[UK Biobank](https://www.ukbiobank.ac.uk/)** — Deep-phenotyped cohort of ~500,000 UK adults linking genomics, blood and urine biomarkers and lifestyle data to hospital, cancer-registry and mortality records, with multi-organ imaging completed for 100,000 of them.
-  *Modalities:* MRI (brain, cardiac, abdominal), ultrasound, DEXA, genomics, biomarkers, EHR · *Access:* Application (approved research, access fee)
+| Dataset | Modalities | Scale | Access |
+| :-- | :-- | :-- | :-- |
+| **[UK Biobank](https://www.ukbiobank.ac.uk/)**<br><sub>Genomics, biomarkers and EHR linkage with multi-organ imaging</sub> | `MRI` `ultrasound` `DEXA` `genomics` `biomarkers` `EHR` | ~500,000 adults<br><sub>100,000 imaged (target met 2025)</sub> | 🔴 Application<br><sub>access fee</sub> |
 
 ### Brain & Mental Health
 
-- **[ABIDE](https://fcon_1000.projects.nitrc.org/indi/abide/)** — Autism benchmark aggregating resting-state fMRI, structural MRI and phenotypic data; ABIDE I pools 1,112 scans from 17 sites and ABIDE II adds 1,114 subjects from 19 sites, with some longitudinal follow-up.
-  *Modalities:* rs-fMRI, structural MRI, phenotypic/clinical · *Access:* Open
-- **[ADNI](https://adni.loni.usc.edu/)** — Longitudinal Alzheimer's study running since 2004 that pairs serial MRI with amyloid, tau and FDG PET, genetics, CSF and plasma biomarkers and repeated cognitive testing across its ADNI 1/GO/2/3/4 phases.
-  *Modalities:* MRI (structural, diffusion, functional), PET, genomics, CSF/plasma biomarkers, cognitive · *Access:* Application (data use agreement via LONI IDA)
-- **[Cam-CAN](https://opendata.mrc-cbu.cam.ac.uk/projects/camcan/)** — Cross-sectional adult lifespan sample of ~700 people aged 18–87 with structural and functional MRI, resting and task MEG, and cognitive scores spanning attention, emotion, action, language and memory.
-  *Modalities:* structural MRI, fMRI, MEG, cognitive/behavioural · *Access:* Application
-- **[COBRE](https://fcon_1000.projects.nitrc.org/indi/retro/cobre.html)** — Compact schizophrenia benchmark with resting-state fMRI, anatomical MRI and phenotypic data for 72 patients and 74 healthy controls (ages 18–65), widely reused as a psychiatric-classification baseline.
-  *Modalities:* rs-fMRI, structural MRI, phenotypic/clinical · *Access:* Open
-- **[Healthy Brain Network (HBN)](https://data.healthybrainnetwork.org/main.php)** — Child Mind Institute biobank of children and adolescents aged 5–21 for transdiagnostic mental-health and learning-disorder research, combining imaging, neurophysiology and wearables with deep clinical phenotyping.
-  *Modalities:* MRI, EEG, eye-tracking, actigraphy, voice/video, genomics, clinical phenotyping · *Access:* Application (data use agreement)
-- **[Human Connectome Project (HCP)](https://www.humanconnectome.org/)** — Reference maps of healthy brain connectivity, with 1,206 young adults scanned at 3T (structural, task and resting fMRI, diffusion MRI) plus 7T and MEG for subsets, alongside behavioural and genetic measures; Lifespan and disease-focused studies extend the same protocols.
-  *Modalities:* structural MRI, fMRI, diffusion MRI, MEG, behavioural, genomics · *Access:* Registration (open terms); Application for restricted family and genetic data
+| Dataset | Modalities | Scale | Access |
+| :-- | :-- | :-- | :-- |
+| **[ABIDE](https://fcon_1000.projects.nitrc.org/indi/abide/)**<br><sub>Multi-site autism benchmark with rich phenotypic data</sub> | `rs-fMRI` `sMRI` `phenotype` | 1,112 subjects / 17 sites (I)<br><sub>1,114 / 19 sites (II)</sub> | 🟢 Open |
+| **[ADNI](https://adni.loni.usc.edu/)**<br><sub>Longitudinal Alzheimer's biomarker cohort, running since 2004</sub> | `MRI` `PET` `genomics` `CSF/plasma` `cognitive` | 4 phases<br><sub>ADNI 1 / GO / 2 / 3 / 4</sub> | 🔴 Application<br><sub>DUA via LONI IDA</sub> |
+| **[Cam-CAN](https://opendata.mrc-cbu.cam.ac.uk/projects/camcan/)**<br><sub>Adult lifespan sample pairing MRI with MEG and cognition</sub> | `sMRI` `fMRI` `MEG` `cognitive` | ~700 subjects<br><sub>ages 18–87</sub> | 🔴 Application |
+| **[COBRE](https://fcon_1000.projects.nitrc.org/indi/retro/cobre.html)**<br><sub>Compact schizophrenia classification baseline</sub> | `rs-fMRI` `sMRI` `phenotype` | 146 subjects<br><sub>72 patients / 74 controls</sub> | 🟢 Open |
+| **[Healthy Brain Network](https://data.healthybrainnetwork.org/main.php)**<br><sub>Pediatric transdiagnostic biobank with deep phenotyping</sub> | `MRI` `EEG` `eye-tracking` `actigraphy` `genomics` `clinical` | 10,000+ target<br><sub>ages 5–21; 3,000+ with EEG</sub> | 🔴 Application<br><sub>data use agreement</sub> |
+| **[Human Connectome Project](https://www.humanconnectome.org/)**<br><sub>Reference maps of healthy brain connectivity</sub> | `sMRI` `fMRI` `dMRI` `MEG` `behavioral` `genomics` | 1,206 young adults<br><sub>7T and MEG for subsets</sub> | 🟡 Registration<br><sub>🔴 for family/genetic data</sub> |
 
 ### Cancer Imaging
 
-- **[The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/)** — NCI-funded archive of de-identified cancer imaging organized into disease-specific collections, many of them linked to clinical outcomes, genomics and expert annotations, which makes it a common starting point for radiogenomics work.
-  *Modalities:* CT, MRI, PET, digital pathology, genomics, clinical/outcomes, annotations · *Access:* Open (some collections require a data use agreement)
+| Dataset | Modalities | Scale | Access |
+| :-- | :-- | :-- | :-- |
+| **[The Cancer Imaging Archive](https://www.cancerimagingarchive.net/)**<br><sub>De-identified cancer imaging linked to clinical and genomic data</sub> | `CT` `MRI` `PET` `pathology` `genomics` `clinical` | Per cancer-type collection<br><sub>NCI-funded</sub> | 🟢 Open<br><sub>🔴 some collections</sub> |
 
 ## Repositories & Platforms
 
-- **[1000 Functional Connectomes Project / INDI](https://fcon_1000.projects.nitrc.org/)** — Umbrella data-sharing initiative distributing resting-state fMRI (and later DTI) from more than 30 sites, and the host for several phenotypically rich collections including ABIDE, COBRE, ADHD-200 and CoRR.
-  *Modalities:* rs-fMRI, structural MRI, DTI, phenotypic/clinical · *Access:* Open
-- **[OpenNeuro](https://openneuro.org/)** — Free platform for validating and sharing BIDS-formatted brain data across MRI, PET, MEG, EEG and iEEG, with versioned public datasets downloadable from the browser, CLI or S3.
-  *Modalities:* MRI, PET, MEG, EEG, iEEG · *Access:* Open (most datasets under CC0)
-- **[PhysioNet](https://physionet.org/)** — MIT-hosted archive of physiological signals and clinical data, including ECG, EEG and waveform databases and the MIMIC critical-care records, with open tooling and a credentialed tier for sensitive clinical data.
-  *Modalities:* ECG, EEG, physiological waveforms, clinical records, imaging · *Access:* Open, with a credentialed tier for restricted databases
+Aggregators worth browsing directly. Several datasets above are distributed through them.
+
+| Platform | Modalities | Highlights | Access |
+| :-- | :-- | :-- | :-- |
+| **[1000 Functional Connectomes / INDI](https://fcon_1000.projects.nitrc.org/)**<br><sub>Umbrella initiative for open rs-fMRI sharing</sub> | `rs-fMRI` `sMRI` `DTI` `phenotype` | 1,200+ datasets / 33 sites<br><sub>hosts ABIDE, COBRE, ADHD-200, CoRR</sub> | 🟢 Open |
+| **[OpenNeuro](https://openneuro.org/)**<br><sub>BIDS-validated sharing for imaging and neurophysiology</sub> | `MRI` `PET` `MEG` `EEG` `iEEG` | Versioned public datasets<br><sub>browser, CLI or S3 download</sub> | 🟢 Open<br><sub>most datasets CC0</sub> |
+| **[PhysioNet](https://physionet.org/)**<br><sub>Physiological signals and critical-care clinical records</sub> | `ECG` `EEG` `waveforms` `clinical` | MIT-hosted<br><sub>includes the MIMIC databases</sub> | 🟢 Open<br><sub>🔴 credentialed tier</sub> |
+
+## Find by Modality
+
+- **Imaging (MRI/CT/PET):** [ADNI](#brain--mental-health) · [Cam-CAN](#brain--mental-health) · [HCP](#brain--mental-health) · [HBN](#brain--mental-health) · [TCIA](#cancer-imaging) · [UK Biobank](#population-scale-biobanks) · [OpenNeuro](#repositories--platforms)
+- **Neurophysiology (EEG/MEG/iEEG):** [Cam-CAN](#brain--mental-health) · [HBN](#brain--mental-health) · [HCP](#brain--mental-health) · [OpenNeuro](#repositories--platforms) · [PhysioNet](#repositories--platforms)
+- **Genomics:** [ADNI](#brain--mental-health) · [HBN](#brain--mental-health) · [HCP](#brain--mental-health) · [TCIA](#cancer-imaging) · [UK Biobank](#population-scale-biobanks)
+- **Clinical records / EHR:** [PhysioNet](#repositories--platforms) · [TCIA](#cancer-imaging) · [UK Biobank](#population-scale-biobanks)
+- **Digital pathology:** [TCIA](#cancer-imaging)
+- **Free to start today (🟢):** [ABIDE](#brain--mental-health) · [COBRE](#brain--mental-health) · [FCP/INDI](#repositories--platforms) · [OpenNeuro](#repositories--platforms) · [PhysioNet](#repositories--platforms) · [TCIA](#cancer-imaging)
 
 ## Contributing
 
-Suggestions are welcome. Before opening a pull request, check that the resource:
+<details>
+<summary>Checklist before opening a pull request</summary>
+
+Suggestions are welcome. Check that the resource:
 
 1. Is genuinely about multimodal medical AI, not general-purpose machine learning.
 2. Has a working, canonical link that points to the resource itself rather than to an aggregator page.
 3. Is not already listed, directly or as part of a repository already listed here.
-4. Follows the entry format above: one sentence on what it is and why it matters, plus its modalities and access level.
+4. Follows the table format in use: name and one-line description, modality tags, scale, and access level.
 
-Entries are ordered alphabetically within each section.
+Rows are ordered alphabetically within each table, and any new entry should also be added to [Find by Modality](#find-by-modality).
+
+</details>
 
 ## License
 
