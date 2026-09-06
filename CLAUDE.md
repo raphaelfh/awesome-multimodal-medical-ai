@@ -28,11 +28,26 @@ find the resource they need:
 - Organize entries into clear, logical categories (e.g., by modality/task:
   Imaging, Clinical Text & EHR, Genomics & Multi-omics, Multimodal Fusion
   Models, Datasets & Benchmarks, Tools & Libraries, Surveys & Reviews).
-- Use a consistent entry format (name — link — one-line description, and
-  optionally tags/year) so entries are easy to scan and compare at a glance.
 - Write descriptions in plain, accessible language: state what the resource
   is and why it's relevant, expand acronyms on first use, and avoid
   unnecessary jargon.
+- Do not create empty or placeholder sections; add a category only when there
+  is curated content to put in it.
+
+### Established entry format
+
+Entries follow this two-line shape, and new entries must match it:
+
+```markdown
+- **[Name](url)** — One sentence on what it is and why it matters.
+  *Modalities:* comma-separated list · *Access:* Open | Registration | Application
+```
+
+Access levels are defined in the README's "How to Read the Entries" section:
+**Open** (direct download), **Registration** (free account or click-through
+terms), **Application** (formal request, data use agreement or review).
+
+Entries are ordered alphabetically within each section.
 
 ## Curation bar
 
