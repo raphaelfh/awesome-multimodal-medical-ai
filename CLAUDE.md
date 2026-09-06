@@ -37,8 +37,16 @@ find the resource they need:
 ### Established entry format
 
 Entries are table rows, and new entries must match the shape of the table they
-join. Datasets use `Dataset | Modalities | Scale | Access`; platforms use
-`Platform | Modalities | Highlights | Access`.
+join. Every table is four columns wide, starts with the name plus a one-line
+description, and ends with the column that answers "can I actually use this":
+
+| Section | Columns |
+| :-- | :-- |
+| Datasets | `Dataset \| Modalities \| Scale \| Access` |
+| Repositories & Platforms | `Platform \| Modalities \| Highlights \| Access` |
+| Libraries & Frameworks | `Library \| Modalities \| Built on \| License` |
+| Tools | `Tool \| Modalities \| Highlights \| License` |
+| Papers | `Paper \| Modalities \| Venue \| Code` |
 
 ```markdown
 | **[Name](url)**<br><sub>One line on what it is and why it matters</sub> | `tag` `tag` | headline number<br><sub>qualifier</sub> | 🟢 Open<br><sub>caveat</sub> |
@@ -49,8 +57,18 @@ join. Datasets use `Dataset | Modalities | Scale | Access`; platforms use
   🟡 Registration (free account or click-through terms), 🔴 Application
   (formal request, data use agreement or review). Put exceptions in the
   `<sub>` qualifier rather than inventing a new level.
-- Rows are ordered alphabetically within each table, and every new entry is
-  also added to the README's "Find by Modality" index.
+- Those three symbols mean data access and nothing else. Do not reuse them for
+  a licence or for whether code exists, which would break the legend.
+- Rows are ordered alphabetically, except papers, which run newest first within
+  their subfield, since recency is what a reader scans a bibliography for.
+- The "Find by Modality" index covers datasets and platforms only. Libraries
+  and tools carry their own modality tags, and papers are grouped by subfield,
+  so re-indexing either there is redundant.
+- A citation is never published unverified: venue, year and URL must each be
+  confirmed before a paper row is written, and a licence must be confirmed per
+  project. Drop a candidate that does not confirm rather than guessing.
+- Percent-encode parentheses in URLs (`%28` / `%29`). A raw `)` inside a
+  markdown link destination can terminate the link early.
 
 ### HTML in the README
 
