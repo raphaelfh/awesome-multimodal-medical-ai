@@ -61,6 +61,7 @@ description, and ends with the column that answers "can I actually use this":
   a licence or for whether code exists, which would break the legend.
 - Rows are ordered alphabetically, except papers, which run newest first within
   their subfield, since recency is what a reader scans a bibliography for.
+  Papers from the same year are ordered alphabetically among themselves.
 - The "Find by Modality" index covers datasets and platforms only. Libraries
   and tools carry their own modality tags, and papers are grouped by subfield,
   so re-indexing either there is redundant.

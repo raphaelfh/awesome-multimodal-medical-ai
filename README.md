@@ -17,7 +17,7 @@ A curated list of multimodal medical AI. Tools, agents, papers and datasets span
   - [Surveys & Field Overviews](#surveys--field-overviews)
   - [Generalist & Vision-Language Models](#generalist--vision-language-models)
   - [Domain Foundation Models](#domain-foundation-models)
-  - [Multimodal Fusion for Prognosis](#multimodal-fusion-for-prognosis)
+  - [Multimodal Fusion for Clinical Prediction](#multimodal-fusion-for-clinical-prediction)
   - [Genomics & Multi-omics](#genomics--multi-omics)
   - [Radiology & Report Generation](#radiology--report-generation)
 - [Find by Modality](#find-by-modality)
@@ -115,13 +115,15 @@ Start here if you are new to the field.
 | **[CONCH](https://www.nature.com/articles/s41591-024-02856-4)**<br><sub>Vision-language pathology model, so a pathologist can search slides by describing a morphology</sub> | `pathology` `text` | Nature Medicine 2024 | [mahmoodlab/CONCH](https://github.com/mahmoodlab/CONCH) |
 | **[RETFound](https://www.nature.com/articles/s41586-023-06555-x)**<br><sub>Retinal images predicting systemic disease, including heart failure and myocardial infarction</sub> | `retinal imaging` | Nature 2023 | [openmedlab/RETFound_MAE](https://github.com/openmedlab/RETFound_MAE) |
 
-### Multimodal Fusion for Prognosis
+### Multimodal Fusion for Clinical Prediction
 
 | Paper | Modalities | Venue | Code |
 | :-- | :-- | :-- | :-- |
+| **[HAIM](https://www.nature.com/articles/s41746-022-00689-4)**<br><sub>Trains 14,324 models across every combination of four modalities, so it measures what fusion buys (6–33% over single-source) rather than asserting it</sub> | `chest X-ray` `EHR tabular` `time-series` `clinical notes` | npj Digital Medicine 2022 | [lrsoenksen/HAIM](https://github.com/lrsoenksen/HAIM) |
 | **[MedFuse](https://arxiv.org/abs/2207.07027)**<br><sub>Tackles the asynchronous, missing-modality reality of clinical data instead of assuming paired inputs</sub> | `chest X-ray` `EHR time-series` | MLHC 2022 | [nyuad-cai/MedFuse](https://github.com/nyuad-cai/MedFuse) |
 | **[PORPOISE](https://www.cell.com/cancer-cell/fulltext/S1535-6108%2822%2900317-8)**<br><sub>Pan-cancer survival from whole-slide images fused with molecular profiles, with interpretability</sub> | `pathology` `genomics` `transcriptomics` | Cancer Cell 2022 | [mahmoodlab/PORPOISE](https://github.com/mahmoodlab/PORPOISE) |
 | **[MCAT](https://openaccess.thecvf.com/content/ICCV2021/html/Chen_Multimodal_Co-Attention_Transformer_for_Survival_Prediction_in_Gigapixel_Whole_Slide_ICCV_2021_paper.html)**<br><sub>Co-attention between histology and omic tokens for gigapixel survival prediction</sub> | `pathology` `genomics` | ICCV 2021 | — |
+| **[Pathomic Fusion](https://arxiv.org/abs/1912.08937)**<br><sub>Kronecker-product fusion with gated attention; the early interpretable baseline the later work builds on</sub> | `pathology` `genomics` `transcriptomics` | IEEE TMI 2020<br><sub>print issue 2022</sub> | [mahmoodlab/PathomicFusion](https://github.com/mahmoodlab/PathomicFusion) |
 
 ### Genomics & Multi-omics
 
@@ -135,6 +137,7 @@ Start here if you are new to the field.
 
 | Paper | Modalities | Venue | Code |
 | :-- | :-- | :-- | :-- |
+| **[MAIRA-2](https://arxiv.org/abs/2406.04449)**<br><sub>Localizes each finding on the image instead of only describing it, and ships RadFact for sentence-level evaluation</sub> | `chest X-ray` `text` `localization` | arXiv 2024 | [microsoft/maira-2](https://huggingface.co/microsoft/maira-2)<br><sub>weights</sub> |
 | **[LLaVA-Rad](https://arxiv.org/abs/2403.08002)**<br><sub>Deliberately lightweight and open-access, with automated report evaluation</sub> | `chest X-ray` `text` | arXiv 2024 | — |
 | **[RadFM](https://arxiv.org/abs/2308.02463)**<br><sub>Handles 2D and 3D scans, multi-image inputs and interleaved vision-language cases</sub> | `CT` `MRI` `X-ray` `text` | arXiv 2023 | — |
 | **[CheXzero](https://www.nature.com/articles/s41551-022-00936-9)**<br><sub>Expert-level zero-shot pathology detection learned from unannotated reports alone</sub> | `chest X-ray` `text` | Nature BME 2022 | [rajpurkarlab/CheXzero](https://github.com/rajpurkarlab/CheXzero) |
